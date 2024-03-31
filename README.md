@@ -1,5 +1,9 @@
 # Warp Search ⚡️
 
+This project addresses the issues associated with performance compromise as the dataset grows in client side search operations using some inuilt libraries and some search alogrithms.
+
+This project offers a unique solution using vanilla javascript and Web Worker for parallel processing.
+
 ## Context
 
 You know often time we face a problem that we want to build a search functionality for large dataset. But it is little difficult to build, even using the libraries like `fuse.js`.
