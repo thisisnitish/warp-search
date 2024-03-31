@@ -10,7 +10,7 @@ You know often time we face a problem that we want to build a search functionali
 
 We use various search algorithms, different hacky solutions but initially all performs well untill your data grows to a large extent. Then the performance of these solutions starts to become slow.
 
-Now, in this case you are reluctant to not go for server side and build your search functionality from scratch. Well there could be many reasons to that. Such as, it can make UX bad. Also, building thir from scratch in server side is hell lot of task. You might introduce some additional complexties to it.
+Now, in this case you are reluctant to not go for server side and build your search functionality from scratch. Well there could be many reasons to that. Such as, it can make UX bad. Also, building this from scratch in server side is hell lot of task. You might introduce some additional complexties to it.
 
 Instead you seek the solution which can be implemented in a client side. It should be efficient enough to not block the main thread of javascript and at the same time maintain the UX good.
 
