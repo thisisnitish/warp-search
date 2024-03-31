@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Warp Search ⚡️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Context
 
-## Available Scripts
+You know often time we face a problem that we want to build a search functionality for large dataset. But it is little difficult to build, even using the libraries like `fuse.js`.
 
-In the project directory, you can run:
+We use various search algorithms, different hacky solutions but initially all performs well untill your data grows to a large extent. Then the performance of these solutions starts to become slow.
 
-### `npm start`
+Now, in this case you are reluctant to not go for server side and build your search functionality from scratch. Well there could be many reasons to that. Such as, it can make UX bad. Also, building thir from scratch in server side is hell lot of task. You might introduce some additional complexties to it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Instead you seek the solution which can be implemented in a client side. It should be efficient enough to not block the main thread of javascript and at the same time maintain the UX good.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### So, what's the solution then? 🤷🏻‍♂️
 
-### `npm test`
+## Approach
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+But, we can achieve this using vanilla javascript and using Web Worker in client side only. This project offers the search functionality for large dataset using web worker and dividing the data into different chunks based on the logical cores of a system.
+This approach allows for faster search performance without blocking the main thread or compromising search capabilities.
 
-### `npm run build`
+## Installation Guide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation of this project is very easy.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+https://github.com/thisisnitish/warp-search.git
+```
 
-### `npm run eject`
+2. Run npm install.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm i
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm start
+```
