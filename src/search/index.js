@@ -1,7 +1,6 @@
 /*eslint-disable*/
 import WebWorker from "./WebWorker";
 import worker from "./worker";
-// import WebWorker from 'worker-loader!./worker.js'
 
 // Esitimates logical core on user's machine
 const numberOfCores = navigator.hardwareConcurrency;
@@ -25,6 +24,16 @@ export const chunkifyRecordsPerCore = (data, setRecordsPerCore) => {
   setRecordsPerCore([...recordsPerCore]);
 };
 
+/**
+ * Search operation using web worker and return the filtered array
+ * @param {*} value searched value which is being searched
+ * @param {*} setFilteredData react state to store resultant array after the search is finished
+ * @param {*} recordsPerCore chunkified records based on the number of logical cores in system
+ * @param {*} setIsSearching react state for maintain a flag of search status
+ * @param {*} setTotalTime react state for total performance of a search
+ * @returns Array of searched data based on the value
+ */
+
 export const enhancedSearch = (
   value,
   setFilteredData,
@@ -32,7 +41,6 @@ export const enhancedSearch = (
   setIsSearching,
   setTotalTime
 ) => {
-  console.log("hello!!");
   const start = performance.now();
   let threadSyncFlag = 0;
   const workerBuffer = []; // buffer for storing active threads
@@ -72,6 +80,6 @@ export const enhancedSearch = (
   setTotalTime([end - start]);
 
   console.log("Total time: ", end - start, " ms");
-  console.log("start: ", start);
-  console.log("end: ", end);
+  // console.log("start: ", start);
+  // console.log("end: ", end);
 };

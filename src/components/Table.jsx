@@ -9,24 +9,31 @@ import Search from "./Search";
 // import data_3 from "../data/data50k_3.json";
 // import data_4 from "../data/data50k_4.json";
 
-// 100k, 500k, 1 million, 10 million
+// 1000, 10000, 100k, 500k, 1 million, 10 million
 
 const TableWrapper = () => {
-  const newData = new Array(50).fill(data).flat(); // making 10 million rows
+  let newData = new Array(50).fill(data).flat(); // making 10 million rows
+  // const newData = data.slice(0, 20);
+
   const [dataSource, setDataSource] = useState(newData);
+  const [searchRecords, setSearchRecords] = useState(newData);
   const [totalTime, setTotalTime] = useState([]);
 
-  console.log("dd: ", dataSource.length);
+  // console.log("dd: ", dataSource.length);
 
   const handleDataLength = (value) => {
-    setDataSource(newData.slice(0, value));
+    newData = newData.slice(0, value);
+    setSearchRecords(newData);
+    setDataSource(newData);
+    setTotalTime([]);
   };
 
   return (
     <div className="container">
       <div className="actions">
         <Search
-          data={dataSource}
+          // data={newData}
+          data={searchRecords}
           setDataSource={setDataSource}
           setTotalTime={setTotalTime}
         />
@@ -36,6 +43,14 @@ const TableWrapper = () => {
           style={{ width: 150, marginLeft: 5 }}
           onChange={handleDataLength}
           options={[
+            {
+              value: 1000,
+              label: "1 Thousand",
+            },
+            {
+              value: 10000,
+              label: "10 Thousand",
+            },
             {
               value: 100000,
               label: "100 Thousand",

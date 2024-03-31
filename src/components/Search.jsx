@@ -13,14 +13,9 @@ const Search = ({ data, setDataSource, setTotalTime }) => {
   }, [data]);
 
   // useEffect(() => {
-  //   if(searchedText.length > 0) handleSearch(searchedText)
-  // }, [searchedText])
+  //   setFilteredData(data);
+  // }, [data]);
 
-  useEffect(() => {
-    setFilteredData(data);
-  }, [data]);
-
-  // TODO: Will test this
   useEffect(() => {
     setDataSource(filteredData);
   }, [filteredData]);
@@ -42,14 +37,11 @@ const Search = ({ data, setDataSource, setTotalTime }) => {
     };
   };
 
-  // TODO: change it
   const performSearch = (value) => {
     value = value.trim();
-    // if(value === '') setFilteredData(data)
 
-    console.log("vv: ", value);
+    // console.log("vv: ", value);
     setIsSearching(true);
-    // standardSearch(value, setFilteredData, recordsPerCore, setIsSearching);
     enhancedSearch(
       value,
       setFilteredData,
