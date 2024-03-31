@@ -12,14 +12,14 @@ We use various search algorithms, different hacky solutions but initially all pe
 
 Now, in this case you are reluctant to not go for server side and build your search functionality from scratch. Well there could be many reasons to that. Such as, it can make UX bad. Also, building this from scratch in server side is hell lot of task. You might introduce some additional complexties to it.
 
-Instead you seek the solution which can be implemented in a client side. It should be efficient enough to not block the main thread of javascript and at the same time maintain the UX good.
+Instead you seek the solution which can be implemented in a client side. It should be efficient enough to not block the main thread of javascript and at the same time maintain the good UX.
 
 ### So, what's the solution then? 🤷🏻‍♂️
 
 ## Approach
 
 But, we can achieve this using vanilla javascript and using Web Worker in client side only. This project offers the search functionality for large dataset using web worker and dividing the data into different chunks based on the logical cores of a system.
-This approach allows for faster search performance without blocking the main thread or compromising search capabilities.
+This approach allows for faster search performance without blocking the main thread and without compromising search capabilities.
 
 ## Installation Guide
 
