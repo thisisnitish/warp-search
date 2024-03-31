@@ -25,10 +25,12 @@ This approach allows for faster search performance without blocking the main thr
 
 Installation of this project is very easy.
 
-1. Clone the project
+1. Fork the repo.
+
+2. Clone the project
 
 ```
-https://github.com/thisisnitish/warp-search.git
+https://github.com/<YOUR_USERNAME>/warp-search.git
 ```
 
 2. Run npm install.
