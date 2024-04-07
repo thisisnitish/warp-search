@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { useEffect, useState } from "react";
 import { Input } from "antd";
 import { chunkifyRecordsPerCore, enhancedSearch } from "../search/index";
